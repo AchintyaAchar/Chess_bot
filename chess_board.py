@@ -34,8 +34,8 @@ class Chess_GUI_wrapper:
         # Load each PNG and associate its image with a python-chess piece symbol.
         # The filenames are expected to follow names such as "Light_p.png".
         self.piece_name_dict = self.filename_to_chesssymb({
-        self.load(os.path.join('Chess_icons', file), file):os.path.splitext(file)[0]
-        for file in os.listdir('Chess_icons') if file.endswith((".png"))
+        self.load(os.path.join('Chess_icons_assets', file), file):os.path.splitext(file)[0]
+        for file in os.listdir('Chess_icons_assets') if file.endswith((".png"))
             })
         # Resize the loaded piece images so each one fits a board square.
         self.piece_name_dict = self.scale_to_board(self.piece_name_dict)
