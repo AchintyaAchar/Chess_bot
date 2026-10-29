@@ -1,0 +1,6 @@
+chess
+pygame-ce
+numpy
+torch
+matplotlib
+os
