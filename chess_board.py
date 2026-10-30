@@ -294,9 +294,9 @@ class Chess_GUI_wrapper:
             if move in self.board_state.legal_moves:
                    self.computer_move_var = move
             else:
-                print(f'move {move} is not legal on the board')
+                raise ch.IllegalMoveError('move given is illegal')
         else:
-            print(f'not computer\'s turn yet')
+            raise ch.IllegalMoveError('move given is illegal')
 
                                   
 
@@ -306,7 +306,7 @@ class Chess_GUI_wrapper:
 def main():
      """Create the chess GUI and start the event loop."""
      # Create a 100-pixel-square, 8-by-8 board; player_first is truthy (1).
-     chess_board = Chess_GUI_wrapper(square_size=100, board_size=8, player_first=0)
+     chess_board = Chess_GUI_wrapper(square_size=100, board_size=8, player_first=1)
      chess_board.run()
 
 if __name__ == '__main__':
